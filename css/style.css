@@ -22,7 +22,7 @@ button {
     max-width: 200px;
 }
 
-#gathering-user-info {
+.main-conteiner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@ button {
     width: 70%;
 }
 
-#gathering-user-info input {
+.main-conteiner input {
     width: 80%;
 }
 
@@ -92,4 +92,39 @@ button {
     color: black;
     overflow-y: scroll;
     background-color: white;
+}
+
+#secret-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 40px;
+    font-size: 1.5rem;
+}
+
+#secret-game h1 {
+    text-align: center;
+    font-size: 3rem;
+    border: 10px solid white;
+    border-radius: 60px;
+    padding: 5px 20px;
+}
+
+#secret-game input {
+    height: 40px;
+    border-radius: 60px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#secret-game button {
+    width: 50%;
+    height: 70px;
+    border: 20px solid white;
+    border-radius: 60px;
+    max-width: 400px;
+    font-size: 1.25rem;
 }
