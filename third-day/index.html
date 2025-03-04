@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="app.js" defer></script>
+    <title>7 Days of Code</title>
+</head>
+<body>
+    <main id="questions-tab">
+        <h1 id="main-question">Faça a sua escolha</h1>
+        <div id="option-questions">
+            <button id="option-one" class="collect-input" onclick="NextQuestion(this.id)">Opção 1</button>
+            <button id="option-two" class="collect-input" onclick="NextQuestion(this.id)">Opção 2</button>
+        </div>
+        <div id="writing-questions">
+            <input type="text" id="tecno-name" class="collect-input" placeholder="Informe a sua resposta">
+            <button class="collect-input" onclick="AddTec()">Adicionar</button>
+            <button class="collect-input" onclick="Finish()">Finalizar</button>
+            <ul id="tecno-list" class="simple-list" role="list">
+            </ul>
+        </div>        
+    </main>    
+</body>
+</html>
