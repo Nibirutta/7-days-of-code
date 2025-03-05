@@ -1,27 +1,38 @@
 let marketList = [[], [], [], []];
-let categoryList = ["Frutas:", "Laticinios:", "Congelados:", "Doces:"]
+let categoryList = ["Frutas:", "Laticinios:", "Congelados:", "Doces:"];
 
 document.getElementById("yes-button").addEventListener("click", function(){
     ProcedeToAdd();
 });
 
-document.getElementById("no-button").addEventListener("click", function(){
-    ShowList();
+document.getElementById("return-button").addEventListener("click", function(){
+    ProcedeToAdd();
 });
 
-document.getElementById("submit-button").addEventListener("click", function(){
+document.getElementById("no-button").addEventListener("click", function(){
+    document.getElementById("main-menu").style.display = "none";
+    ChangeList();
+    document.getElementById("display-list").style.display = "flex";
+});
+
+document.getElementById("add-button").addEventListener("click", function(){
     AddItemToList();
 });
 
-function ProcedeToAdd() {
-    document.getElementById("market-list").style.display = "none";
+document.getElementById("remove-button").addEventListener("click", function(){
+    RemoveItem();
+    ReturnToMenu();
+});
+
+function ProcedeToAdd(){
+    document.getElementById("main-menu").style.display = "none";
+    document.getElementById("display-list").style.display = "none";
     document.getElementById("list-control").style.display = "flex";
 }
 
-function ShowList() {
-    document.getElementById("market-list").style.display = "none";
-
+function ChangeList(){
     let myList = document.getElementById("final-list");
+    myList.innerHTML = "";
 
     for(i = 0; i < marketList.length; i++){
         let item = document.createElement("li");
@@ -38,11 +49,9 @@ function ShowList() {
             myList.appendChild(item);
         }
     }
-
-    document.getElementById("display-list").style.display = "block";
 }
 
-function AddItemToList() {
+function AddItemToList(){
     if(document.getElementById("item-name").value === ""){
         alert("Preencha o campo!");
         return;
@@ -73,9 +82,34 @@ function AddItemToList() {
         default:
             alert("Tipo inválido!")
             break;
+    }   
+
+    ReturnToMenu();
+}
+
+function RemoveItem(){
+    if(document.getElementById("item-name").value === ""){
+        alert("Preencha o campo!");
+        return;
     }
 
+    let itemName = document.getElementById("item-name").value;
+
+    for(i = 0; i < marketList.length; i++){
+        if(marketList[i].indexOf(itemName) >= 0){
+            marketList[i].splice(marketList[i].indexOf(itemName), 1);
+            ChangeList();
+            return;
+        }
+    }
+
+    alert("Item não encontrado, tente novamente");
     document.getElementById("item-name").value = "";
+}
+
+function ReturnToMenu(){
+    document.getElementById("item-name").value = "";
+    document.getElementById("subtitle").innerHTML = "Deseja alterar a lista novamente?"
     document.getElementById("list-control").style.display = "none";
-    document.getElementById("market-list").style.display = "flex";    
+    document.getElementById("main-menu").style.display = "flex";
 }

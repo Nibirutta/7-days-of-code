@@ -40,6 +40,7 @@ button {
 .collect-input {
     padding: 0.5rem;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 0.5rem;
     border: none;
 }
@@ -137,7 +138,7 @@ button {
     font-size: 2rem;
 }
 
-#market-list {
+#main-menu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,4 +173,8 @@ button {
 
 #display-list{
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }

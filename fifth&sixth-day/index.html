@@ -10,15 +10,15 @@
 <body>
     <main id="marketplace" class="main-conteiner">
         <h1>Lista de Compras</h1>
-        <div id="market-list">
-            <p>Você deseja adicionar algum item à lista?</p>
+        <div id="main-menu">
+            <p id="subtitle">Você deseja alterar a lista?</p>
             <div class="two-choices">
                 <button id="yes-button" class="collect-input">Sim</button>
                 <button id="no-button" class="collect-input">Não</button>
             </div>
         </div>
         <div id="list-control">
-            <p>Qual o item que deseja acrescentar?</p>
+            <p>Qual item que deseja alterar?</p>
             <div id="adding-item">
                 <input type="text" id="item-name" class="collect-input" placeholder="Nome do item">
                 <select name="item" id="item-type" class="collect-input">
@@ -28,11 +28,13 @@
                     <option value="doces">Doces</option>
                 </select>
             </div>
-            <button class="collect-input" id="submit-button">Adicionar</button>
+            <button class="collect-input" id="add-button">Adicionar</button>
+            <button class="collect-input" id="remove-button">Remover</button>
         </div>
         <div id="display-list">
             <ul id="final-list" class="simple-list" role="list">
             </ul>
+            <button id="return-button" class="collect-input">Alterar lista</button>
         </div>
     </main>    
 </body>
