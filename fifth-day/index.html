@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="app.js" defer></script>
+    <title>7 Days of Code</title>
+</head>
+<body>
+    <main id="marketplace" class="main-conteiner">
+        <h1>Lista de Compras</h1>
+        <div id="market-list">
+            <p>Você deseja adicionar algum item à lista?</p>
+            <div class="two-choices">
+                <button id="yes-button" class="collect-input">Sim</button>
+                <button id="no-button" class="collect-input">Não</button>
+            </div>
+        </div>
+        <div id="list-control">
+            <p>Qual o item que deseja acrescentar?</p>
+            <div id="adding-item">
+                <input type="text" id="item-name" class="collect-input" placeholder="Nome do item">
+                <select name="item" id="item-type" class="collect-input">
+                    <option value="frutas">Frutas</option>
+                    <option value="laticinios">Laticinios</option>
+                    <option value="congelados">Congelados</option>
+                    <option value="doces">Doces</option>
+                </select>
+            </div>
+            <button class="collect-input" id="submit-button">Adicionar</button>
+        </div>
+        <div id="display-list">
+            <ul id="final-list" class="simple-list" role="list">
+            </ul>
+        </div>
+    </main>    
+</body>
+</html>

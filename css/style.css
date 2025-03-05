@@ -30,6 +30,7 @@ button {
     gap: 15px;
     height: 70%;
     width: 70%;
+    color: white;
 }
 
 .main-conteiner input {
@@ -80,8 +81,10 @@ button {
     width: 80%;
 }
 
-#writing-questions ul {
-    width: 50%;
+.simple-list {
+    min-height: 50px;
+    min-width: 600px;
+    max-height: 400px;
     list-style-type: none;
     text-align: center;
     line-height: 1.5rem;
@@ -127,4 +130,46 @@ button {
     border-radius: 60px;
     max-width: 400px;
     font-size: 1.25rem;
+}
+
+#marketplace {
+    gap: 40px;
+    font-size: 2rem;
+}
+
+#market-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.two-choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    min-width: 200px;
+    min-height: 50px;
+    width: 50%;
+    font-size: 1rem;
+}
+
+#list-control {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+#adding-item {
+    display: flex;
+    gap: 20px;
+}
+
+#display-list{
+    display: none;
 }
