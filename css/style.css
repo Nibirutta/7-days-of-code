@@ -171,10 +171,81 @@ button {
     gap: 20px;
 }
 
-#display-list{
+#display-list {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+#calc-interface {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 60%;
+    height: 50%;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+#calc-name {
+    grid-column: span 4;
+    justify-self: center;
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+}
+
+#calc-display {
+    grid-column: span 4;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: center;
+    font-size: 2rem;
+    background-color: black;
+    width: 98%;
+    color: white;
+    border-radius: 10px;
+}
+
+#display {
+    margin: auto 5px auto 0;
+}
+
+#calc-items {
+    grid-column: span 3;
+    grid-row: span 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#calc-operators {
+    grid-row: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calc-input, .oper-input {
+    border: 0;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.calc-input {
+    height: 22.5%;
+    width: 30%;
+}
+
+.oper-input {
+    height: 18%;
+    width: 90%;
 }
